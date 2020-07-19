@@ -2,12 +2,17 @@ package com.rik
 
 import java.nio.file.Path
 
-class FileLogger(val file: Path) : Logger {
+class FileLogger(val file: Path) : Logger, Message {
     override fun debug(msg: String) {
 
     }
 
     override fun warn(msg: String) {
-        TODO("Not yet implemented")
+
+    }
+
+    override fun info(msg: String) {
+        super<Logger>.info(msg)
+        super<Message>.info()
     }
 }

@@ -8,7 +8,7 @@ open class Meeting(val meetingName: String, open val location: Location, val log
     //    private val logger: Logger = FileLogger(Paths.get("/some/file.log"))
     open val locationName = ""
     fun addParticipant(participant: Participant) {
-        logger.debug("Participant Added")
+        logger.info("Participant Added")
         if (verifyParticipant(participant)) {
             println("Added ${participant.participantName}")
         }
