@@ -4,8 +4,9 @@ class PersonalReview(
     meetingName: String,
     val employee: Participant,
     reviewers: List<Participant>,
-    override val location: Room
-) : Meeting(meetingName, location) {
+    override val location: Room,
+    logger: Logger
+) : Meeting(meetingName, location, logger) {
 
     override val locationName
         get() = location.roomName

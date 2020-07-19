@@ -1,5 +1,6 @@
 package com.rik
 
-internal class Logger {
-
+interface Logger {
+    fun debug(msg: String)
+    fun warn(msg: String)
 }

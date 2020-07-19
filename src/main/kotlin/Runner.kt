@@ -1,7 +1,10 @@
 package com.rik
 
+import java.nio.file.Paths
+
 fun main() {
-    val postCode = USZipCode("12345")
+//    val postCode = USZipCode("12345")
+    val logger: Logger = FileLogger(Paths.get("/some/file.log"))
 //    val name = Name()
 //    name.name = "Ngonyoku"
 //    val review = PersonalReview(
